@@ -8,14 +8,11 @@ export default function Home() {
           </h1>
         </div>
         <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          TripCanvas is an AI-native travel planning prototype that turns a
-          user&apos;s natural-language trip request into a structured, editable
-          travel plan. Instead of behaving like a raw chatbot, it combines
-          conversational input, itinerary generation, recommendation cards, and
-          clear confidence/fallback states to help users move from vague travel
-          intent to a usable trip plan. It is designed as the frontend
-          foundation for a future booking companion rather than a one-off AI
-          wrapper.
+          TripCanvas is an AI-native travel planning prototype that turns a user&apos;s natural-language trip request
+          into a structured, editable travel plan. Instead of behaving like a raw chatbot, it combines conversational
+          input, itinerary generation, recommendation cards, and clear confidence/fallback states to help users move
+          from vague travel intent to a usable trip plan. It is designed as the frontend foundation for a future booking
+          companion rather than a one-off AI wrapper.
         </p>
       </main>
     </div>
