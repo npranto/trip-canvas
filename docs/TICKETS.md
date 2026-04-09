@@ -12,15 +12,15 @@ Create a concise project scope doc for the first release.
 
 Acceptance criteria:
 
-* list of in-scope features
-* list of explicitly out-of-scope features
-* success criteria for MVP
-* assumptions and constraints documented
-* reviewed with PM/team
+- list of in-scope features
+- list of explicitly out-of-scope features
+- success criteria for MVP
+- assumptions and constraints documented
+- reviewed with PM/team
 
 Testing:
 
-* none
+- none
 
 Notes:
 This is required before deep implementation.
@@ -35,20 +35,20 @@ Gather missing details from PM/team.
 
 Acceptance criteria:
 
-* documented answers for:
+- documented answers for:
+  - target user
+  - core journey
+  - design availability
+  - AI model constraints
+  - hosting constraints
+  - persistence expectations
+  - booking/paywall expectations
 
-  * target user
-  * core journey
-  * design availability
-  * AI model constraints
-  * hosting constraints
-  * persistence expectations
-  * booking/paywall expectations
-* unanswered questions marked with engineering assumptions
+- unanswered questions marked with engineering assumptions
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -60,20 +60,20 @@ Finalize tech/tool decisions for Phase 1.
 
 Acceptance criteria:
 
-* documented decisions for:
+- documented decisions for:
+  - frontend framework
+  - styling approach
+  - AI provider
+  - persistence approach
+  - testing stack
+  - deployment platform
 
-  * frontend framework
-  * styling approach
-  * AI provider
-  * persistence approach
-  * testing stack
-  * deployment platform
-* rationale and tradeoffs captured
-* “why not X” notes for major alternatives
+- rationale and tradeoffs captured
+- “why not X” notes for major alternatives
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -85,24 +85,24 @@ Create the core data shape before implementation.
 
 Acceptance criteria:
 
-* documented types/schemas for:
+- documented types/schemas for:
+  - trip request
+  - trip assumptions
+  - itinerary day
+  - recommendation item
+  - trip plan response
+  - refinement request
 
-  * trip request
-  * trip assumptions
-  * itinerary day
-  * recommendation item
-  * trip plan response
-  * refinement request
-* versioned response shape agreed upon
-* validation strategy defined
+- versioned response shape agreed upon
+- validation strategy defined
 
 Testing:
 
-* basic schema tests planned
+- basic schema tests planned
 
 Dependencies:
 
-* TC-003
+- TC-003
 
 ---
 
@@ -114,14 +114,14 @@ Map pages and reusable UI structure.
 
 Acceptance criteria:
 
-* route inventory defined
-* component inventory defined
-* shared layout rules defined
-* page responsibilities documented
+- route inventory defined
+- component inventory defined
+- shared layout rules defined
+- page responsibilities documented
 
 Dependencies:
 
-* TC-004
+- TC-004
 
 ---
 
@@ -135,18 +135,18 @@ Set up codebase for fast, stable work.
 
 Acceptance criteria:
 
-* project scaffolded
-* TypeScript enabled
-* linting configured
-* formatting configured
-* folder structure created
-* env example file created
-* README with setup instructions added
+- project scaffolded
+- TypeScript enabled
+- linting configured
+- formatting configured
+- folder structure created
+- env example file created
+- README with setup instructions added
 
 Testing:
 
-* project builds locally
-* lint/typecheck pass
+- project builds locally
+- lint/typecheck pass
 
 ---
 
@@ -158,21 +158,21 @@ Prevent random structure during sprint.
 
 Acceptance criteria:
 
-* folders defined for:
+- folders defined for:
+  - app/routes
+  - components
+  - features
+  - lib
+  - services
+  - types/schemas
+  - tests
 
-  * app/routes
-  * components
-  * features
-  * lib
-  * services
-  * types/schemas
-  * tests
-* naming rules documented
-* feature ownership boundaries documented
+- naming rules documented
+- feature ownership boundaries documented
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -184,15 +184,15 @@ Ensure pull requests validate code quality automatically.
 
 Acceptance criteria:
 
-* CI runs on PR
-* lint runs
-* typecheck runs
-* tests run
-* build validation runs
+- CI runs on PR
+- lint runs
+- typecheck runs
+- tests run
+- build validation runs
 
 Dependencies:
 
-* TC-010
+- TC-010
 
 ---
 
@@ -204,14 +204,14 @@ Enable testing from the start.
 
 Acceptance criteria:
 
-* unit/component test framework installed
-* E2E framework installed
-* sample tests added
-* test scripts documented
+- unit/component test framework installed
+- E2E framework installed
+- sample tests added
+- test scripts documented
 
 Dependencies:
 
-* TC-010
+- TC-010
 
 ---
 
@@ -225,20 +225,20 @@ Build shared layout primitives for the app.
 
 Acceptance criteria:
 
-* root layout exists
-* max-width/container system exists
-* spacing system consistent
-* header/footer structure defined
-* mobile responsive baseline present
+- root layout exists
+- max-width/container system exists
+- spacing system consistent
+- header/footer structure defined
+- mobile responsive baseline present
 
 Testing:
 
-* responsive checks
-* layout smoke test
+- responsive checks
+- layout smoke test
 
 Dependencies:
 
-* TC-010
+- TC-010
 
 ---
 
@@ -250,25 +250,25 @@ Establish shared components for rapid UI assembly.
 
 Acceptance criteria:
 
-* button
-* input
-* textarea
-* select
-* card
-* badge/chip
-* skeleton loader
-* empty state
-* alert/error state
-* modal/drawer if needed
+- button
+- input
+- textarea
+- select
+- card
+- badge/chip
+- skeleton loader
+- empty state
+- alert/error state
+- modal/drawer if needed
 
 Testing:
 
-* render tests for key primitives
-* accessibility basics for controls
+- render tests for key primitives
+- accessibility basics for controls
 
 Dependencies:
 
-* TC-020
+- TC-020
 
 ---
 
@@ -280,15 +280,15 @@ Ensure UI consistency.
 
 Acceptance criteria:
 
-* typography scale defined
-* spacing scale defined
-* color usage rules defined
-* semantic token naming established
-* dark mode decision explicitly documented
+- typography scale defined
+- spacing scale defined
+- color usage rules defined
+- semantic token naming established
+- dark mode decision explicitly documented
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -302,17 +302,17 @@ Create initial entry page for TripCanvas.
 
 Acceptance criteria:
 
-* hero section exists
-* value proposition visible
-* example prompts present
-* CTA to start planning
-* trust/disclaimer copy present
-* responsive layout
+- hero section exists
+- value proposition visible
+- example prompts present
+- CTA to start planning
+- trust/disclaimer copy present
+- responsive layout
 
 Testing:
 
-* rendering tests
-* visual sanity across breakpoints
+- rendering tests
+- visual sanity across breakpoints
 
 ---
 
@@ -324,21 +324,21 @@ Allow user to enter natural-language request.
 
 Acceptance criteria:
 
-* textarea input
-* helper prompt examples
-* validation for empty state
-* submit button states
-* loading state hook points
-* accessible labels
+- textarea input
+- helper prompt examples
+- validation for empty state
+- submit button states
+- loading state hook points
+- accessible labels
 
 Testing:
 
-* validation tests
-* interaction tests
+- validation tests
+- interaction tests
 
 Dependencies:
 
-* TC-021
+- TC-021
 
 ---
 
@@ -350,24 +350,24 @@ Support partially structured trip entry.
 
 Acceptance criteria:
 
-* optional fields for:
+- optional fields for:
+  - destination
+  - duration
+  - month/date
+  - budget
+  - traveler type
+  - interests
 
-  * destination
-  * duration
-  * month/date
-  * budget
-  * traveler type
-  * interests
-* values merge into request payload
-* optional fields do not block freeform usage
+- values merge into request payload
+- optional fields do not block freeform usage
 
 Testing:
 
-* form interaction tests
+- form interaction tests
 
 Dependencies:
 
-* TC-031
+- TC-031
 
 ---
 
@@ -381,15 +381,15 @@ Finalize AI generation approach.
 
 Acceptance criteria:
 
-* chosen provider documented
-* structured JSON output strategy documented
-* prompt orchestration approach documented
-* fallback strategy documented
-* cost considerations documented
+- chosen provider documented
+- structured JSON output strategy documented
+- prompt orchestration approach documented
+- fallback strategy documented
+- cost considerations documented
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -401,19 +401,19 @@ Create prompt construction logic for trip generation.
 
 Acceptance criteria:
 
-* user input normalized
-* prompt builder supports natural-language + structured fields
-* generation prompt defines response schema
-* output instructions include confidence/fallback guidance
+- user input normalized
+- prompt builder supports natural-language + structured fields
+- generation prompt defines response schema
+- output instructions include confidence/fallback guidance
 
 Testing:
 
-* unit tests for prompt assembly
-* snapshot tests if helpful
+- unit tests for prompt assembly
+- snapshot tests if helpful
 
 Dependencies:
 
-* TC-040
+- TC-040
 
 ---
 
@@ -425,21 +425,21 @@ Expose server-side generation endpoint.
 
 Acceptance criteria:
 
-* endpoint accepts trip request
-* calls AI provider
-* returns typed structured response
-* handles provider errors gracefully
-* includes traceable error states
+- endpoint accepts trip request
+- calls AI provider
+- returns typed structured response
+- handles provider errors gracefully
+- includes traceable error states
 
 Testing:
 
-* API integration tests
-* invalid payload tests
-* provider failure tests
+- API integration tests
+- invalid payload tests
+- provider failure tests
 
 Dependencies:
 
-* TC-041
+- TC-041
 
 ---
 
@@ -451,19 +451,19 @@ Prevent malformed AI output from breaking UI.
 
 Acceptance criteria:
 
-* response parsed against schema
-* missing fields handled safely
-* optional fallback content injected when needed
-* malformed output returns recoverable error or degraded result
+- response parsed against schema
+- missing fields handled safely
+- optional fallback content injected when needed
+- malformed output returns recoverable error or degraded result
 
 Testing:
 
-* schema validation tests
-* malformed response tests
+- schema validation tests
+- malformed response tests
 
 Dependencies:
 
-* TC-042
+- TC-042
 
 ---
 
@@ -477,19 +477,19 @@ Connect generated trip data to route/UI.
 
 Acceptance criteria:
 
-* route renders generated trip plan
-* supports loading/error/empty states
-* handles direct navigation safety
-* supports basic trip id state strategy
+- route renders generated trip plan
+- supports loading/error/empty states
+- handles direct navigation safety
+- supports basic trip id state strategy
 
 Testing:
 
-* route render tests
-* failure state tests
+- route render tests
+- failure state tests
 
 Dependencies:
 
-* TC-042, TC-043
+- TC-042, TC-043
 
 ---
 
@@ -501,20 +501,20 @@ Display top-level trip summary clearly.
 
 Acceptance criteria:
 
-* title
-* destination
-* duration
-* budget label
-* overall summary text
-* clean responsive layout
+- title
+- destination
+- duration
+- budget label
+- overall summary text
+- clean responsive layout
 
 Testing:
 
-* component render tests
+- component render tests
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -526,18 +526,18 @@ Surface inferred assumptions and confidence/fallback info.
 
 Acceptance criteria:
 
-* assumptions list shown
-* confidence notes shown
-* fallback/uncertainty copy styled clearly
-* handles missing data gracefully
+- assumptions list shown
+- confidence notes shown
+- fallback/uncertainty copy styled clearly
+- handles missing data gracefully
 
 Testing:
 
-* component tests for presence/absence cases
+- component tests for presence/absence cases
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -549,20 +549,20 @@ Display day-by-day trip structure.
 
 Acceptance criteria:
 
-* itinerary day cards
-* activity list
-* food/area suggestions
-* per-day metadata if present
-* mobile-friendly layout
+- itinerary day cards
+- activity list
+- food/area suggestions
+- per-day metadata if present
+- mobile-friendly layout
 
 Testing:
 
-* component tests
-* empty day fallback tests
+- component tests
+- empty day fallback tests
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -574,19 +574,19 @@ Render recommendation sections in productized card form.
 
 Acceptance criteria:
 
-* hotel cards render from data
-* flight cards render from data
-* placeholder state supported
-* recommendation reason shown
-* CTA/link handling ready for future use
+- hotel cards render from data
+- flight cards render from data
+- placeholder state supported
+- recommendation reason shown
+- CTA/link handling ready for future use
 
 Testing:
 
-* component tests
+- component tests
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -600,18 +600,18 @@ Define how refinements are represented and sent.
 
 Acceptance criteria:
 
-* refinement request schema defined
-* refinement history strategy decided
-* re-generation scope defined
-* prior trip context usage documented
+- refinement request schema defined
+- refinement history strategy decided
+- re-generation scope defined
+- prior trip context usage documented
 
 Testing:
 
-* schema tests
+- schema tests
 
 Dependencies:
 
-* TC-004
+- TC-004
 
 ---
 
@@ -623,22 +623,22 @@ Create entry points for common refinements.
 
 Acceptance criteria:
 
-* quick actions visible:
+- quick actions visible:
+  - cheaper
+  - fewer activities
+  - more family-friendly
+  - closer to city center
 
-  * cheaper
-  * fewer activities
-  * more family-friendly
-  * closer to city center
-* interaction hooks connected
-* disabled/loading states handled
+- interaction hooks connected
+- disabled/loading states handled
 
 Testing:
 
-* click interaction tests
+- click interaction tests
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -650,19 +650,19 @@ Allow user to refine existing plan.
 
 Acceptance criteria:
 
-* current trip context sent with refinement intent
-* updated plan returned
-* loading state supported
-* errors handled safely
+- current trip context sent with refinement intent
+- updated plan returned
+- loading state supported
+- errors handled safely
 
 Testing:
 
-* API tests
-* invalid refinement tests
+- API tests
+- invalid refinement tests
 
 Dependencies:
 
-* TC-060, TC-042
+- TC-060, TC-042
 
 ---
 
@@ -674,17 +674,17 @@ Allow custom trip changes beyond preset actions.
 
 Acceptance criteria:
 
-* text input for refinement
-* submission triggers same refinement flow
-* loading and error states included
+- text input for refinement
+- submission triggers same refinement flow
+- loading and error states included
 
 Testing:
 
-* form interaction tests
+- form interaction tests
 
 Dependencies:
 
-* TC-062
+- TC-062
 
 ---
 
@@ -698,14 +698,14 @@ Choose short-term and long-term trip storage path.
 
 Acceptance criteria:
 
-* Phase 1 persistence approach documented
-* Phase 2 DB approach documented
-* migration approach considered
-* save/load/delete flows outlined
+- Phase 1 persistence approach documented
+- Phase 2 DB approach documented
+- migration approach considered
+- save/load/delete flows outlined
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -717,18 +717,18 @@ Allow a user to save generated plans.
 
 Acceptance criteria:
 
-* save action exists
-* trip can be retrieved after save
-* save feedback shown
-* data shape persisted safely
+- save action exists
+- trip can be retrieved after save
+- save feedback shown
+- data shape persisted safely
 
 Testing:
 
-* save/retrieve tests
+- save/retrieve tests
 
 Dependencies:
 
-* TC-070, TC-050
+- TC-070, TC-050
 
 ---
 
@@ -740,19 +740,19 @@ Provide overview of previously saved trips.
 
 Acceptance criteria:
 
-* list of saved trips
-* metadata preview
-* click through to trip detail
-* empty state
+- list of saved trips
+- metadata preview
+- click through to trip detail
+- empty state
 
 Testing:
 
-* list rendering tests
-* empty state tests
+- list rendering tests
+- empty state tests
 
 Dependencies:
 
-* TC-071
+- TC-071
 
 ---
 
@@ -764,17 +764,17 @@ Allow user to edit core trip assumptions.
 
 Acceptance criteria:
 
-* assumptions editable
-* save/update trigger present
-* values can be used in future regeneration flow
+- assumptions editable
+- save/update trigger present
+- values can be used in future regeneration flow
 
 Testing:
 
-* form interaction tests
+- form interaction tests
 
 Dependencies:
 
-* TC-071
+- TC-071
 
 ---
 
@@ -786,18 +786,18 @@ Support basic trip management.
 
 Acceptance criteria:
 
-* delete action
-* archive or soft-delete decision made
-* duplicate action
-* confirmation flow where needed
+- delete action
+- archive or soft-delete decision made
+- duplicate action
+- confirmation flow where needed
 
 Testing:
 
-* interaction tests
+- interaction tests
 
 Dependencies:
 
-* TC-072
+- TC-072
 
 ---
 
@@ -811,14 +811,14 @@ Choose auth path based on phase and constraints.
 
 Acceptance criteria:
 
-* guest mode policy defined
-* provider choice documented
-* protected route strategy documented
-* session management basics decided
+- guest mode policy defined
+- provider choice documented
+- protected route strategy documented
+- session management basics decided
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -830,19 +830,19 @@ Add user sign-in capability.
 
 Acceptance criteria:
 
-* sign in flow works
-* session persists
-* protected saved-trip routes handled
-* logged-out UX handled
+- sign in flow works
+- session persists
+- protected saved-trip routes handled
+- logged-out UX handled
 
 Testing:
 
-* auth flow tests
-* route protection tests
+- auth flow tests
+- route protection tests
 
 Dependencies:
 
-* TC-080
+- TC-080
 
 ---
 
@@ -854,17 +854,17 @@ Support reusable trip preferences.
 
 Acceptance criteria:
 
-* user profile fields defined
-* profile retrieval/update flow designed
-* trip generation can optionally consume preferences
+- user profile fields defined
+- profile retrieval/update flow designed
+- trip generation can optionally consume preferences
 
 Testing:
 
-* schema and API tests
+- schema and API tests
 
 Dependencies:
 
-* TC-081
+- TC-081
 
 ---
 
@@ -876,17 +876,17 @@ Let user manage default travel preferences.
 
 Acceptance criteria:
 
-* edit profile/preferences form
-* saved confirmation
-* preferences usable by generation flow
+- edit profile/preferences form
+- saved confirmation
+- preferences usable by generation flow
 
 Testing:
 
-* form tests
+- form tests
 
 Dependencies:
 
-* TC-082
+- TC-082
 
 ---
 
@@ -900,14 +900,14 @@ Evaluate best path for hotel recommendations.
 
 Acceptance criteria:
 
-* at least 2–3 provider options compared
-* cost and complexity considered
-* mock-to-real migration plan documented
-* chosen path recommended
+- at least 2–3 provider options compared
+- cost and complexity considered
+- mock-to-real migration plan documented
+- chosen path recommended
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -919,18 +919,18 @@ Replace mock hotel cards with service-driven data.
 
 Acceptance criteria:
 
-* service abstraction exists
-* hotel data normalized to app schema
-* graceful fallback to mock or empty state supported
+- service abstraction exists
+- hotel data normalized to app schema
+- graceful fallback to mock or empty state supported
 
 Testing:
 
-* service tests
-* normalization tests
+- service tests
+- normalization tests
 
 Dependencies:
 
-* TC-090
+- TC-090
 
 ---
 
@@ -942,13 +942,13 @@ Evaluate flight API options.
 
 Acceptance criteria:
 
-* provider comparison documented
-* pricing/cost/rate limit considerations documented
-* chosen path recommended
+- provider comparison documented
+- pricing/cost/rate limit considerations documented
+- chosen path recommended
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -960,18 +960,18 @@ Replace mock flight cards with service-driven data.
 
 Acceptance criteria:
 
-* service abstraction exists
-* normalized flight schema returned
-* fallback supported
+- service abstraction exists
+- normalized flight schema returned
+- fallback supported
 
 Testing:
 
-* service tests
-* normalization tests
+- service tests
+- normalization tests
 
 Dependencies:
 
-* TC-092
+- TC-092
 
 ---
 
@@ -983,17 +983,17 @@ Support outbound provider CTA.
 
 Acceptance criteria:
 
-* recommendation cards support outbound booking action
-* click tracking hook available
-* disclosures present if needed
+- recommendation cards support outbound booking action
+- click tracking hook available
+- disclosures present if needed
 
 Testing:
 
-* interaction tests
+- interaction tests
 
 Dependencies:
 
-* TC-091, TC-093
+- TC-091, TC-093
 
 ---
 
@@ -1007,13 +1007,13 @@ Decide whether and how the product should charge users.
 
 Acceptance criteria:
 
-* pricing strategy documented
-* free vs paid features defined
-* MVP decision captured
+- pricing strategy documented
+- free vs paid features defined
+- MVP decision captured
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -1025,17 +1025,17 @@ Model who gets access to which features.
 
 Acceptance criteria:
 
-* plan tiers defined
-* entitlement model defined
-* usage limit strategy documented
+- plan tiers defined
+- entitlement model defined
+- usage limit strategy documented
 
 Testing:
 
-* rule tests planned
+- rule tests planned
 
 Dependencies:
 
-* TC-100
+- TC-100
 
 ---
 
@@ -1047,18 +1047,18 @@ Add ability to collect payment if required.
 
 Acceptance criteria:
 
-* checkout/session flow works
-* user subscription/payment state stored
-* failed payment handling defined
+- checkout/session flow works
+- user subscription/payment state stored
+- failed payment handling defined
 
 Testing:
 
-* payment flow test coverage
-* webhook tests if applicable
+- payment flow test coverage
+- webhook tests if applicable
 
 Dependencies:
 
-* TC-101
+- TC-101
 
 ---
 
@@ -1070,18 +1070,18 @@ Show clear upgrade pathways.
 
 Acceptance criteria:
 
-* upgrade page/modal exists
-* gated feature messaging exists
-* upgrade CTA connected
+- upgrade page/modal exists
+- gated feature messaging exists
+- upgrade CTA connected
 
 Testing:
 
-* UI tests
-* gated flow tests
+- UI tests
+- gated flow tests
 
 Dependencies:
 
-* TC-102
+- TC-102
 
 ---
 
@@ -1095,18 +1095,18 @@ Allow saved trips to be shared externally.
 
 Acceptance criteria:
 
-* share link behavior defined
-* public/private decision documented
-* shared trip route implemented
+- share link behavior defined
+- public/private decision documented
+- shared trip route implemented
 
 Testing:
 
-* route accessibility tests
-* permission tests if needed
+- route accessibility tests
+- permission tests if needed
 
 Dependencies:
 
-* TC-071
+- TC-071
 
 ---
 
@@ -1118,17 +1118,17 @@ Provide share actions to users.
 
 Acceptance criteria:
 
-* copy link
-* share CTA
-* confirmation feedback
+- copy link
+- share CTA
+- confirmation feedback
 
 Testing:
 
-* interaction tests
+- interaction tests
 
 Dependencies:
 
-* TC-110
+- TC-110
 
 ---
 
@@ -1140,17 +1140,17 @@ Allow trip export outside the app.
 
 Acceptance criteria:
 
-* print-friendly view or PDF export exists
-* itinerary exports cleanly
-* key sections included
+- print-friendly view or PDF export exists
+- itinerary exports cleanly
+- key sections included
 
 Testing:
 
-* export smoke tests
+- export smoke tests
 
 Dependencies:
 
-* TC-050
+- TC-050
 
 ---
 
@@ -1164,13 +1164,13 @@ Create event tracking plan before random analytics calls appear.
 
 Acceptance criteria:
 
-* event list documented
-* payload schema documented
-* event naming conventions defined
+- event list documented
+- payload schema documented
+- event naming conventions defined
 
 Testing:
 
-* none
+- none
 
 ---
 
@@ -1182,24 +1182,24 @@ Track key user actions.
 
 Acceptance criteria:
 
-* events tracked for:
+- events tracked for:
+  - prompt submit
+  - trip generated
+  - refinement clicked
+  - save clicked
+  - share clicked
+  - recommendation CTA clicked
+  - errors surfaced
 
-  * prompt submit
-  * trip generated
-  * refinement clicked
-  * save clicked
-  * share clicked
-  * recommendation CTA clicked
-  * errors surfaced
-* tracking abstraction exists
+- tracking abstraction exists
 
 Testing:
 
-* event firing tests where practical
+- event firing tests where practical
 
 Dependencies:
 
-* TC-120
+- TC-120
 
 ---
 
@@ -1211,18 +1211,18 @@ Capture runtime and API failures.
 
 Acceptance criteria:
 
-* frontend errors captured
-* API failures logged
-* AI generation failures logged
-* environment-sensitive logging behavior defined
+- frontend errors captured
+- API failures logged
+- AI generation failures logged
+- environment-sensitive logging behavior defined
 
 Testing:
 
-* error pathway smoke tests
+- error pathway smoke tests
 
 Dependencies:
 
-* TC-042
+- TC-042
 
 ---
 
@@ -1234,17 +1234,17 @@ Improve resilience when generation fails.
 
 Acceptance criteria:
 
-* retry action available
-* degraded fallback copy exists
-* partial result handling exists where possible
+- retry action available
+- degraded fallback copy exists
+- partial result handling exists where possible
 
 Testing:
 
-* failure case tests
+- failure case tests
 
 Dependencies:
 
-* TC-042, TC-043
+- TC-042, TC-043
 
 ---
 
@@ -1258,17 +1258,17 @@ Bring key flows to a respectable accessibility baseline.
 
 Acceptance criteria:
 
-* label coverage
-* semantic headings
-* focus states
-* keyboard interaction
-* contrast issues addressed
-* basic screen-reader support
+- label coverage
+- semantic headings
+- focus states
+- keyboard interaction
+- contrast issues addressed
+- basic screen-reader support
 
 Testing:
 
-* accessibility checks
-* keyboard smoke tests
+- accessibility checks
+- keyboard smoke tests
 
 ---
 
@@ -1280,14 +1280,14 @@ Improve responsiveness and frontend performance.
 
 Acceptance criteria:
 
-* heavy render paths reviewed
-* unnecessary rerenders reduced
-* loading states optimized
-* large bundle risks identified
+- heavy render paths reviewed
+- unnecessary rerenders reduced
+- loading states optimized
+- large bundle risks identified
 
 Testing:
 
-* performance sanity checks
+- performance sanity checks
 
 ---
 
@@ -1299,14 +1299,14 @@ Improve presentation quality before team demo.
 
 Acceptance criteria:
 
-* visual consistency improved
-* loading copy polished
-* edge states covered
-* seeded sample trips available
-* no broken states in main demo path
+- visual consistency improved
+- loading copy polished
+- edge states covered
+- seeded sample trips available
+- no broken states in main demo path
 
 Testing:
 
-* manual demo checklist executed
+- manual demo checklist executed
 
 ---
