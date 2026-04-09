@@ -1,0 +1,184 @@
+## MVP — In scope
+
+The first release includes the end-to-end flow from landing through generation, results, refinement, and saved trips, as specified in the product plan (sections 1.1–1.6).
+
+### 1.1 Landing / homepage
+
+- Hero with clear value proposition  
+- Prompt-led trip input  
+- Example prompts  
+- CTA to generate trip  
+- Optional secondary CTA for viewing saved trips  
+- Trust / clarity messaging about AI-generated output  
+- Responsive layout  
+
+### 1.2 Trip request input
+
+- Natural-language prompt textarea  
+- Optional structured helpers: destination, duration, date/month, traveler type, budget, interests  
+- Validation  
+- Input hints / prompt examples  
+- Submit and loading states  
+- Prompt sanitization / normalization  
+
+### 1.3 Trip generation
+
+- AI orchestration layer  
+- Prompt builder  
+- Structured schema-based output  
+- Confidence metadata  
+- Fallback when output is incomplete  
+- Latency / loading experience  
+- Retry logic  
+- Error handling  
+
+### 1.4 Trip results view
+
+- Trip title / summary  
+- Assumptions used  
+- Budget interpretation  
+- Day-by-day itinerary  
+- Hotel recommendation placeholders or live results  
+- Flight recommendation placeholders or live results  
+- Rationale / explanation  
+- Confidence / uncertainty section  
+- Quick refinement actions  
+- Edit assumptions entry point  
+- Save trip  
+- Share / export action  
+
+### 1.5 Trip refinement
+
+- Quick actions: cheaper, fewer activities, more family-friendly, closer to city center  
+- Freeform refinement input  
+- Partial trip regeneration  
+- Refinement history or latest-version handling  
+- Loading state for refinement  
+- Preserve prior trip context  
+
+### 1.6 Saved trip view
+
+- Saved trip list  
+- Trip detail page  
+- Metadata: created date, destination, duration, budget, traveler type  
+- Editable assumptions  
+- View previous refinements or current final plan  
+- Delete / archive trip  
+- Duplicate trip  
+
+---
+
+## Explicitly out of scope for MVP
+
+### User accounts and full product persistence (plan §2)
+
+- Authentication (email/password, magic link, Google, guest mode, protected routes, session persistence as a full auth product)  
+- Rich user profiles (home airport, default budget, traveler profile, family/kids prefs, hotel style, payment setup)  
+- **Note:** MVP still delivers **saved trips** per §1.6; storage may be **local-first** or minimal backend as implementation allows, without full account model.  
+
+### Booking-adjacent and monetization (plan §3)
+
+- Real hotel / flight provider integrations (beyond placeholders where §1.4 allows)  
+- Booking handoff, affiliate flows, internal checkout  
+- Payments, subscriptions, Stripe  
+
+### Other exclusions (aligned with plan “Tier 2+” until scheduled)
+
+- Real-time collaborative planning  
+- PDF export as a first-class shipped feature (unless trivial add-on; otherwise defer)  
+- Full analytics stack, observability, rate limiting, caching at production scale  
+- Admin / debug tooling for operators  
+
+---
+
+## Success criteria for MVP
+
+1. A **deployed, shareable** app where a new user can land, enter intent (structured and/or freeform), and **generate** a structured trip.  
+2. **Results** are readable and actionable (itinerary, assumptions, budget readout, rationale, confidence), not a raw chat dump.  
+3. **Refinement** works via quick actions and/or freeform input, with loading states and sensible handling of partial regen / version context.  
+4. **Saved trips**: list, detail, metadata, edit assumptions, view refinement history or final plan, delete/archive, duplicate — per §1.6.  
+5. **Reliability of the core loop:** loading, error, retry, and incomplete-output fallbacks are handled so the flow rarely dead-ends without explanation.  
+6. **Quality bar:** responsive UI, critical path covered by **automated tests**, **basic CI** (build/test on change).  
+
+---
+
+## Assumptions and constraints
+
+- **AI dependency:** Output quality and latency depend on chosen models and prompts; “confidence” and fallbacks are product requirements, not guarantees of factual travel accuracy.  
+- **Placeholders:** Hotels and flights may be **placeholder or lightly integrated** in MVP as long as §1.4 is satisfied; real APIs are post-MVP unless explicitly pulled forward.  
+- **Persistence:** Saved trips are in scope; **account-based sync across devices** is not required for MVP if local or lightweight persistence meets §1.6.  
+- **Compliance / trust:** Messaging should set expectations about AI-generated plans; no legal advice or booking commitments implied by the product.  
+- **Team:** Scope assumes capacity to ship §1.1–1.6 plus tests and CI; descoping refinements or saved trips would require a formal scope change.  
+
+---
+
+## Execution phases (from plan tiers)
+
+Phases are **sequencing guidance**, not separate releases unless you split them.
+
+### Tier 1 — Must build first (MVP backbone)
+
+- Landing page  
+- Trip input  
+- Trip generation flow  
+- Structured trip result page  
+- Quick refinement actions  
+- Loading / error / fallback states  
+- Save trip (local or persistent, consistent with §1.6)  
+- Shareable deployed app  
+- Automated tests for critical flow  
+- CI basics  
+
+### Tier 2 — After MVP (“should build next”)
+
+- Authentication  
+- Real persistence / sync (account-backed)  
+- Editable assumptions (polish beyond MVP minimum if any gap)  
+- Saved trips dashboard (if MVP used minimal list UX)  
+- Export / share link improvements  
+- Analytics  
+- Stronger accessibility pass  
+- Polished responsive experience  
+- Stronger schema validation  
+- Better AI retry / fallback behavior  
+
+### Tier 3 — Nice to have / production readiness
+
+- Real hotel / flight integrations  
+- Booking handoff  
+- Payments / subscriptions  
+- Profile preferences  
+- Collaborative planning  
+- PDF export  
+- Observability stack  
+- Caching and rate limiting  
+- Admin / debug tools  
+
+---
+
+## Post-MVP backlog (build later)
+
+Track implementation of **plan §2 (User account and persistence)** and **plan §3 (Booking-adjacent features)** after MVP ships, in line with Tier 2 and Tier 3 above.
+
+---
+
+## Review
+
+| Item                         | Status                          |
+|-----------------------------|---------------------------------|
+| PM / team review            | *✅* |
+
+Once reviewed, update this row or link meeting notes.
+
+---
+
+## Testing
+
+- No product QA script for this ticket; acceptance is documentation completeness and stakeholder alignment.
+
+---
+
+## Notes
+
+- This document **replaces** the open acceptance criteria for TC-001 in the backlog for purposes of calling **TC-001 done**.  
+- Deeper requirements (personas, metrics, edge cases) belong in follow-on tickets (e.g. TC-002+).
