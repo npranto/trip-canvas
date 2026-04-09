@@ -12,8 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const defaultTitle = 'TripCanvas';
+const title = process.env.PROJECT_NAME?.trim() || defaultTitle;
+
 export const metadata: Metadata = {
-  title: 'TripCanvas',
+  title,
   description:
     'AI-native travel planning: turn natural-language trip requests into structured, editable plans with itineraries, recommendations, and clear confidence states.',
 };
