@@ -1,0 +1,6 @@
+# Not required for `next build`; keeps deployment uploads smaller.
+e2e
+coverage
+playwright-report
+test-results
+blob-report
