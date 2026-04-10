@@ -5,7 +5,7 @@ import { fetchExampleTrip } from '@/services/example-trip';
 export default async function NewTripPage() {
   const trip = await fetchExampleTrip();
   return (
-    <div className="flex flex-1 flex-col gap-8 bg-zinc-50 py-8 text-center sm:py-16 sm:text-left dark:bg-black">
+    <div className="flex flex-1 flex-col gap-8 py-8 text-center sm:py-16 sm:text-left">
       <div className="mx-auto flex w-full flex-col gap-8">
         <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.home}>
           ← Home

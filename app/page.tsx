@@ -5,7 +5,7 @@ import { ExampleGreeting } from '@/features/example-feature/ExampleGreeting';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-1 flex-col gap-8 bg-zinc-50 py-8 text-center sm:py-16 sm:text-left dark:bg-black">
+    <div className="flex flex-1 flex-col gap-8 py-8 text-center sm:py-16 sm:text-left">
       <div className="mx-auto flex w-full flex-col gap-8">
         <div className="space-y-2">
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-4xl">
