@@ -2,6 +2,9 @@
   "name": "trip-canvas",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "description": "TripCanvas — AI-native travel planning prototype: natural-language trip requests become structured, editable plans with conversational input, itineraries, recommendation cards, and clear confidence/fallback states; frontend foundation for a future booking companion.",
   "scripts": {
     "dev": "next dev",
