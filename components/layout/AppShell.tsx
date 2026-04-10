@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { paths } from '@/app/routes/paths';
 
-export const layoutContainerClass = 'mx-auto w-full max-w-2xl px-4 sm:px-6';
+export const layoutContainerClass = 'mx-auto w-full max-w-5xl px-4 sm:px-6';
 
 export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

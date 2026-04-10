@@ -16,7 +16,7 @@ describe('AppShell', () => {
   });
 
   it('exports a shared layout container class for max-width alignment', () => {
-    expect(layoutContainerClass).toContain('max-w-2xl');
+    expect(layoutContainerClass).toContain('max-w-5xl');
     expect(layoutContainerClass).toContain('mx-auto');
   });
 });
