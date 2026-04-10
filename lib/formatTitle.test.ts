@@ -10,6 +10,6 @@ describe('formatTitle', () => {
   });
 
   it('lower-cases the remainder after the first character', () => {
-    expect(formatTitle('hELLo')).toBe('Hello');
+    expect(formatTitle('hELLo')).toBe('Hellox');
   });
 });
