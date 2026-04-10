@@ -5,8 +5,8 @@ import { ExampleGreeting } from '@/features/example-feature/ExampleGreeting';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 bg-zinc-50 px-6 py-16 font-sans dark:bg-black">
-      <main className="flex w-full max-w-2xl flex-col gap-8 text-center sm:text-left">
+    <div className="flex flex-1 flex-col gap-8 bg-zinc-50 py-8 text-center sm:py-16 sm:text-left dark:bg-black">
+      <div className="mx-auto flex w-full max-w-2xl flex-col gap-8">
         <div className="space-y-2">
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-4xl">
             TripCanvas
@@ -25,7 +25,7 @@ export default function HomePage() {
         <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.tripNew}>
           New trip (app/routes/paths)
         </Link>
-      </main>
+      </div>
     </div>
   );
 }
