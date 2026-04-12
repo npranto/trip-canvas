@@ -1,8 +1,65 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* §5.2 semantic color tokens (light) */
+  --color-brand-primary: #1d73e8;
+  --color-brand-primary-hover: #155fcc;
+  --color-brand-primary-soft: #eaf3ff;
+  --color-brand-secondary: #213a63;
+  --color-brand-accent: #7ec8f8;
+  --color-bg-canvas: #f4f7fb;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-border-default: #d9e2ec;
+  --color-border-strong: #bcccdc;
+  --color-text-primary: #10233e;
+  --color-text-secondary: #37506e;
+  --color-text-muted: #6b7c93;
+  --color-text-inverse: #ffffff;
+  --color-success: #1f9d63;
+  --color-warning: #c58917;
+  --color-error: #d14343;
+  --color-info: #2d7ff9;
+  --color-confidence-high: #1f9d63;
+  --color-confidence-medium: #d89b1c;
+  --color-confidence-low: #d14343;
+  --color-fallback-bg: #fff8e8;
+  --color-fallback-border: #f1d18a;
+
+  --background: var(--color-bg-canvas);
+  --foreground: var(--color-text-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* §5.2 semantic color tokens (dark) */
+    --color-brand-primary: #4b93f7;
+    --color-brand-primary-hover: #6aa6ff;
+    --color-brand-primary-soft: #15202f;
+    --color-brand-secondary: #a3bce0;
+    --color-brand-accent: #8ccbf8;
+    --color-bg-canvas: #0c1018;
+    --color-bg-surface: #131b28;
+    --color-bg-subtle: #18202f;
+    --color-border-default: #2a3546;
+    --color-border-strong: #3d4f68;
+    --color-text-primary: #eef2f7;
+    --color-text-secondary: #a7b4c8;
+    --color-text-muted: #6f7f95;
+    --color-text-inverse: #0c1018;
+    --color-success: #3ecf8e;
+    --color-warning: #e4a82a;
+    --color-error: #e86060;
+    --color-info: #5c9aff;
+    --color-confidence-high: #3ecf8e;
+    --color-confidence-medium: #e8b23d;
+    --color-confidence-low: #e86060;
+    --color-fallback-bg: #241e14;
+    --color-fallback-border: #6b5530;
+
+    --background: var(--color-bg-canvas);
+    --foreground: var(--color-text-primary);
+  }
 }
 
 @theme inline {
@@ -10,13 +67,49 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* §5.2 — theme colors point at :root tokens */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-primary-hover: var(--color-brand-primary-hover);
+  --color-brand-primary-soft: var(--color-brand-primary-soft);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-bg-canvas: var(--color-bg-canvas);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-border-default: var(--color-border-default);
+  --color-border-strong: var(--color-border-strong);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+  --color-confidence-high: var(--color-confidence-high);
+  --color-confidence-medium: var(--color-confidence-medium);
+  --color-confidence-low: var(--color-confidence-low);
+  --color-fallback-bg: var(--color-fallback-bg);
+  --color-fallback-border: var(--color-fallback-border);
+
+  /* §5.2 — tc.* scale */
+  --color-tc-blue-50: #eaf3ff;
+  --color-tc-blue-100: #d8e9ff;
+  --color-tc-blue-500: #1d73e8;
+  --color-tc-blue-600: #155fcc;
+  --color-tc-blue-700: #124eab;
+  --color-tc-slate-50: #f8fafc;
+  --color-tc-slate-100: #f4f7fb;
+  --color-tc-slate-200: #d9e2ec;
+  --color-tc-slate-300: #bcccdc;
+  --color-tc-slate-500: #6b7c93;
+  --color-tc-slate-700: #37506e;
+  --color-tc-slate-900: #10233e;
+  --color-tc-success: #1f9d63;
+  --color-tc-warning: #c58917;
+  --color-tc-danger: #d14343;
+  --color-tc-info: #2d7ff9;
 }
 
 body {
