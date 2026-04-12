@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  /* §5.2 semantic color tokens (light) */
+  /* §5.2 semantic color tokens (light). `colors.light` in src/lib/design/tokens.ts */
   --color-brand-primary: #1d73e8;
   --color-brand-primary-hover: #155fcc;
   --color-brand-primary-soft: #eaf3ff;
@@ -32,7 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* §5.2 semantic color tokens (dark) */
+    /* §5.2 semantic color tokens (dark). `colors.dark` in src/lib/design/tokens.ts */
     --color-brand-primary: #4b93f7;
     --color-brand-primary-hover: #6aa6ff;
     --color-brand-primary-soft: #15202f;
@@ -68,7 +68,7 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 
-  /* §5.2 — theme colors point at :root tokens */
+  /* §5.2 — theme colors point at :root tokens. `colors` in src/lib/design/tokens.ts */
   --color-brand-primary: var(--color-brand-primary);
   --color-brand-primary-hover: var(--color-brand-primary-hover);
   --color-brand-primary-soft: var(--color-brand-primary-soft);
@@ -93,7 +93,7 @@
   --color-confidence-medium: var(--color-confidence-medium);
   --color-confidence-low: var(--color-confidence-low);
 
-  /* §5.2 — tc.* scale */
+  /* §5.2 — tc.* scale (light). `tc` in src/lib/design/tokens.ts */
   --color-tc-blue-50: #eaf3ff;
   --color-tc-blue-100: #d8e9ff;
   --color-tc-blue-500: #1d73e8;
@@ -113,7 +113,8 @@
 }
 
 /*
- * §5.3 — Optional theme utilities (keep in sync with `typography` in src/lib/design/tokens.ts). Prefer importing `typography` in TSX; use `tc-type-*` when a class string is needed without TS.
+ * §5.3 — Optional theme utilities. `typography` in src/lib/design/tokens.ts (same classes as below).
+ * Prefer importing `typography` in TSX; use `tc-type-*` when you need a class string without TS.
  */
 @utility tc-type-display {
   @apply text-4xl font-semibold tracking-tight md:text-5xl;

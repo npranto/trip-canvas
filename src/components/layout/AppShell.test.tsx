@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { AppShell, layoutContainerClass } from '@/components/layout/AppShell';
+import { AppShell, containerClass } from '@/components/layout/AppShell';
 
 describe('AppShell', () => {
   it('renders header, main, and footer landmarks with page content', () => {
@@ -15,8 +15,8 @@ describe('AppShell', () => {
     expect(screen.getByText('Smoke content')).toBeInTheDocument();
   });
 
-  it('exports a shared layout container class for max-width alignment', () => {
-    expect(layoutContainerClass).toContain('max-w-5xl');
-    expect(layoutContainerClass).toContain('mx-auto');
+  it('exports a shared container class for max-width alignment', () => {
+    expect(containerClass).toContain('max-w-5xl');
+    expect(containerClass).toContain('mx-auto');
   });
 });
