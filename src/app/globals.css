@@ -65,7 +65,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 
   /* §5.2 — theme colors point at :root tokens */
@@ -74,15 +74,17 @@
   --color-brand-primary-soft: var(--color-brand-primary-soft);
   --color-brand-secondary: var(--color-brand-secondary);
   --color-brand-accent: var(--color-brand-accent);
-  --color-bg-canvas: var(--color-bg-canvas);
-  --color-bg-surface: var(--color-bg-surface);
-  --color-bg-subtle: var(--color-bg-subtle);
-  --color-border-default: var(--color-border-default);
-  --color-border-strong: var(--color-border-strong);
-  --color-text-primary: var(--color-text-primary);
-  --color-text-secondary: var(--color-text-secondary);
-  --color-text-muted: var(--color-text-muted);
-  --color-text-inverse: var(--color-text-inverse);
+  --color-canvas: var(--color-bg-canvas);
+  --color-surface: var(--color-bg-surface);
+  --color-surface-subtle: var(--color-bg-subtle);
+  --color-edge: var(--color-border-default);
+  --color-edge-strong: var(--color-border-strong);
+  --color-fg-secondary: var(--color-text-secondary);
+  --color-fg-muted: var(--color-text-muted);
+  --color-fg-inverse: var(--color-text-inverse);
+  --color-fallback-surface: var(--color-fallback-bg);
+  --color-fallback-edge: var(--color-fallback-border);
+
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
   --color-error: var(--color-error);
@@ -90,8 +92,6 @@
   --color-confidence-high: var(--color-confidence-high);
   --color-confidence-medium: var(--color-confidence-medium);
   --color-confidence-low: var(--color-confidence-low);
-  --color-fallback-bg: var(--color-fallback-bg);
-  --color-fallback-border: var(--color-fallback-border);
 
   /* §5.2 — tc.* scale */
   --color-tc-blue-50: #eaf3ff;
@@ -110,6 +110,37 @@
   --color-tc-warning: #c58917;
   --color-tc-danger: #d14343;
   --color-tc-info: #2d7ff9;
+}
+
+/*
+ * §5.3 — Optional theme utilities (keep in sync with `typography` in src/lib/design/tokens.ts). Prefer importing `typography` in TSX; use `tc-type-*` when a class string is needed without TS.
+ */
+@utility tc-type-display {
+  @apply text-4xl font-semibold tracking-tight md:text-5xl;
+}
+@utility tc-type-h1 {
+  @apply text-3xl font-semibold tracking-tight md:text-4xl;
+}
+@utility tc-type-h2 {
+  @apply text-2xl font-semibold tracking-tight md:text-3xl;
+}
+@utility tc-type-h3 {
+  @apply text-xl font-semibold;
+}
+@utility tc-type-body {
+  @apply text-base leading-7;
+}
+@utility tc-type-body-large {
+  @apply text-lg leading-8;
+}
+@utility tc-type-body-small {
+  @apply text-sm leading-6;
+}
+@utility tc-type-label {
+  @apply text-sm font-medium;
+}
+@utility tc-type-caption {
+  @apply text-xs font-medium uppercase tracking-wide;
 }
 
 body {
