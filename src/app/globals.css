@@ -1,0 +1,151 @@
+@import 'tailwindcss';
+
+:root {
+  /* §5.2 semantic color tokens (light). `colors.light` in src/lib/design/tokens.ts */
+  --color-brand-primary: #1d73e8;
+  --color-brand-primary-hover: #155fcc;
+  --color-brand-primary-soft: #eaf3ff;
+  --color-brand-secondary: #213a63;
+  --color-brand-accent: #7ec8f8;
+  --color-bg-canvas: #f4f7fb;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-border-default: #d9e2ec;
+  --color-border-strong: #bcccdc;
+  --color-text-primary: #10233e;
+  --color-text-secondary: #37506e;
+  --color-text-muted: #6b7c93;
+  --color-text-inverse: #ffffff;
+  --color-success: #1f9d63;
+  --color-warning: #c58917;
+  --color-error: #d14343;
+  --color-info: #2d7ff9;
+  --color-confidence-high: #1f9d63;
+  --color-confidence-medium: #d89b1c;
+  --color-confidence-low: #d14343;
+  --color-fallback-bg: #fff8e8;
+  --color-fallback-border: #f1d18a;
+
+  --background: var(--color-bg-canvas);
+  --foreground: var(--color-text-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* §5.2 semantic color tokens (dark). `colors.dark` in src/lib/design/tokens.ts */
+    --color-brand-primary: #4b93f7;
+    --color-brand-primary-hover: #6aa6ff;
+    --color-brand-primary-soft: #15202f;
+    --color-brand-secondary: #a3bce0;
+    --color-brand-accent: #8ccbf8;
+    --color-bg-canvas: #0c1018;
+    --color-bg-surface: #131b28;
+    --color-bg-subtle: #18202f;
+    --color-border-default: #2a3546;
+    --color-border-strong: #3d4f68;
+    --color-text-primary: #eef2f7;
+    --color-text-secondary: #a7b4c8;
+    --color-text-muted: #6f7f95;
+    --color-text-inverse: #0c1018;
+    --color-success: #3ecf8e;
+    --color-warning: #e4a82a;
+    --color-error: #e86060;
+    --color-info: #5c9aff;
+    --color-confidence-high: #3ecf8e;
+    --color-confidence-medium: #e8b23d;
+    --color-confidence-low: #e86060;
+    --color-fallback-bg: #241e14;
+    --color-fallback-border: #6b5530;
+
+    --background: var(--color-bg-canvas);
+    --foreground: var(--color-text-primary);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+
+  /* §5.2 — theme colors point at :root tokens. `colors` in src/lib/design/tokens.ts */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-primary-hover: var(--color-brand-primary-hover);
+  --color-brand-primary-soft: var(--color-brand-primary-soft);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-canvas: var(--color-bg-canvas);
+  --color-surface: var(--color-bg-surface);
+  --color-surface-subtle: var(--color-bg-subtle);
+  --color-edge: var(--color-border-default);
+  --color-edge-strong: var(--color-border-strong);
+  --color-fg-secondary: var(--color-text-secondary);
+  --color-fg-muted: var(--color-text-muted);
+  --color-fg-inverse: var(--color-text-inverse);
+  --color-fallback-surface: var(--color-fallback-bg);
+  --color-fallback-edge: var(--color-fallback-border);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+  --color-confidence-high: var(--color-confidence-high);
+  --color-confidence-medium: var(--color-confidence-medium);
+  --color-confidence-low: var(--color-confidence-low);
+
+  /* §5.2 — tc.* scale (light). `tc` in src/lib/design/tokens.ts */
+  --color-tc-blue-50: #eaf3ff;
+  --color-tc-blue-100: #d8e9ff;
+  --color-tc-blue-500: #1d73e8;
+  --color-tc-blue-600: #155fcc;
+  --color-tc-blue-700: #124eab;
+  --color-tc-slate-50: #f8fafc;
+  --color-tc-slate-100: #f4f7fb;
+  --color-tc-slate-200: #d9e2ec;
+  --color-tc-slate-300: #bcccdc;
+  --color-tc-slate-500: #6b7c93;
+  --color-tc-slate-700: #37506e;
+  --color-tc-slate-900: #10233e;
+  --color-tc-success: #1f9d63;
+  --color-tc-warning: #c58917;
+  --color-tc-danger: #d14343;
+  --color-tc-info: #2d7ff9;
+}
+
+/*
+ * §5.3 — Optional theme utilities. `typography` in src/lib/design/tokens.ts (same classes as below).
+ * Prefer importing `typography` in TSX; use `tc-type-*` when you need a class string without TS.
+ */
+@utility tc-type-display {
+  @apply text-4xl font-semibold tracking-tight md:text-5xl;
+}
+@utility tc-type-h1 {
+  @apply text-3xl font-semibold tracking-tight md:text-4xl;
+}
+@utility tc-type-h2 {
+  @apply text-2xl font-semibold tracking-tight md:text-3xl;
+}
+@utility tc-type-h3 {
+  @apply text-xl font-semibold;
+}
+@utility tc-type-body {
+  @apply text-base leading-7;
+}
+@utility tc-type-body-large {
+  @apply text-lg leading-8;
+}
+@utility tc-type-body-small {
+  @apply text-sm leading-6;
+}
+@utility tc-type-label {
+  @apply text-sm font-medium;
+}
+@utility tc-type-caption {
+  @apply text-xs font-medium uppercase tracking-wide;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
