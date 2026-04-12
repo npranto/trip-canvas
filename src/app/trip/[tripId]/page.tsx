@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { paths, tripPath } from '@/app/routes/paths';
+import { typography } from '@/lib/design/tokens';
+import { cn } from '@/lib/utils/cn';
 
 type TripPageProps = {
   params: Promise<{ tripId: string }>;
@@ -12,21 +14,33 @@ export default async function TripPage({ params }: TripPageProps) {
   return (
     <div className="flex flex-1 flex-col gap-8 py-8 text-center sm:py-16 sm:text-left">
       <div className="mx-auto flex w-full flex-col gap-8">
-        <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-          <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.home}>
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+          <Link
+            className={cn(
+              typography['body-small'],
+              'text-brand-primary underline underline-offset-2 hover:text-brand-primary-hover',
+            )}
+            href={paths.home}
+          >
             ← Home
           </Link>
-          <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.trips}>
+          <Link
+            className={cn(
+              typography['body-small'],
+              'text-brand-primary underline underline-offset-2 hover:text-brand-primary-hover',
+            )}
+            href={paths.trips}
+          >
             Saved trips
           </Link>
         </div>
-        <h1 className="mt-2 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Trip</h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          Trip id <span className="font-mono text-sm text-zinc-800 dark:text-zinc-200">{decodedId}</span> — plan shell
-          placeholder (direct-load safe).
+        <h1 className={cn(typography.h1, 'mt-2 text-foreground')}>Trip</h1>
+        <p className={cn(typography.body, 'mt-2 text-fg-secondary')}>
+          Trip id <span className={cn(typography['body-small'], 'font-mono text-foreground')}>{decodedId}</span> — plan
+          shell placeholder (direct-load safe).
         </p>
-        <p className="text-sm text-zinc-500 dark:text-zinc-500">
-          Shareable URL: <span className="font-mono text-zinc-700 dark:text-zinc-300">{tripPath(tripId)}</span>
+        <p className={cn(typography['body-small'], 'text-fg-muted')}>
+          Shareable URL: <span className="font-mono text-fg-secondary">{tripPath(tripId)}</span>
         </p>
       </div>
     </div>

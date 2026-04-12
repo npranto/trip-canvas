@@ -1,7 +1,21 @@
 /**
- * Programmatic mirror of semantic color tokens (see `app/globals.css` / spec §5.2).
- * Prefer CSS variables in components; use this for charts, canvas, or non-Tailwind contexts.
+ * Programmatic design tokens. Colors mirror spec §5.2 (`app/globals.css`); prefer CSS variables in
+ * components. Use `tripCanvasColors` for charts, canvas, or non-Tailwind contexts.
+ *
+ * Typography: Tailwind class bundles per spec §5.3 — pair with `font-sans` (Inter) from the root layout.
  */
+export const typography = {
+  display: 'text-4xl md:text-5xl font-semibold tracking-tight',
+  h1: 'text-3xl md:text-4xl font-semibold tracking-tight',
+  h2: 'text-2xl md:text-3xl font-semibold tracking-tight',
+  h3: 'text-xl font-semibold',
+  body: 'text-base leading-7',
+  'body-large': 'text-lg leading-8',
+  'body-small': 'text-sm leading-6',
+  label: 'text-sm font-medium',
+  caption: 'text-xs font-medium uppercase tracking-wide',
+} as const;
+
 export const tripCanvasColors = {
   brand: {
     primary: '#1D73E8',

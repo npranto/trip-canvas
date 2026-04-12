@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { paths } from '@/app/routes/paths';
+import { typography } from '@/lib/design/tokens';
+import { cn } from '@/lib/utils/cn';
 import { fetchExampleTrip } from '@/services/example-trip';
 
 export default async function NewTripPage() {
@@ -7,11 +9,17 @@ export default async function NewTripPage() {
   return (
     <div className="flex flex-1 flex-col gap-8 py-8 text-center sm:py-16 sm:text-left">
       <div className="mx-auto flex w-full flex-col gap-8">
-        <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.home}>
+        <Link
+          className={cn(
+            typography['body-small'],
+            'text-brand-primary underline underline-offset-2 hover:text-brand-primary-hover',
+          )}
+          href={paths.home}
+        >
           ← Home
         </Link>
-        <h1 className="mt-6 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">New trip</h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">Example service data: {trip.title}</p>
+        <h1 className={cn(typography.h1, 'mt-6 text-foreground')}>New trip</h1>
+        <p className={cn(typography.body, 'mt-2 text-fg-secondary')}>Example service data: {trip.title}</p>
       </div>
     </div>
   );

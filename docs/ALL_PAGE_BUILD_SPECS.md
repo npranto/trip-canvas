@@ -123,6 +123,8 @@ Use semantic tokens, not one-off colors. Components should depend on semantic ro
 - `--color-text-muted`
 - `--color-text-inverse`
 
+**Tailwind (`globals.css` `@theme`):** register aliases so class names stay readable. Examples: `--color-canvas` → `bg-canvas`, `--color-surface` → `bg-surface`, `--color-surface-subtle` → `bg-surface-subtle`, `--color-edge` / `--color-edge-strong` → `border-edge` / `border-edge-strong`, `--color-fg-secondary` / `--color-fg-muted` / `--color-fg-inverse` → `text-fg-*` (and `bg-fg-*` if needed), `--color-fallback-surface` / `--color-fallback-edge` → `bg-fallback-surface` / `border-fallback-edge`. Do not register `--color-bg-*`, `--color-border-*`, `--color-text-*`, or `--color-fallback-bg` / `--color-fallback-border` directly in `@theme` — that produces `bg-bg-*`, `border-border-*`, `text-text-*`, and `bg-fallback-bg`. Primary body text uses `text-foreground` (`--color-foreground` → `--color-text-primary`).
+
 ### Feedback
 
 - `--color-success`
@@ -215,9 +217,9 @@ colors: {
 - `h1`
 - `h2`
 - `h3`
-- `bodyLg`
 - `body`
-- `bodySm`
+- `body-large`
+- `body-small`
 - `label`
 - `caption`
 
@@ -229,9 +231,9 @@ export const typography = {
   h1: 'text-3xl md:text-4xl font-semibold tracking-tight',
   h2: 'text-2xl md:text-3xl font-semibold tracking-tight',
   h3: 'text-xl font-semibold',
-  bodyLg: 'text-lg leading-8',
   body: 'text-base leading-7',
-  bodySm: 'text-sm leading-6',
+  'body-large': 'text-lg leading-8',
+  'body-small': 'text-sm leading-6',
   label: 'text-sm font-medium',
   caption: 'text-xs font-medium uppercase tracking-wide',
 } as const;
@@ -243,7 +245,7 @@ export const typography = {
 - route titles: h1
 - section titles: h2
 - card titles: h3
-- body paragraphs: body or bodySm
+- body paragraphs: body or body-small
 - metadata/chips/helper labels: label or caption
 
 ---
