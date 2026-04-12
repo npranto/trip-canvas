@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import { formatTitle } from '@/lib/formatTitle';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/cn';
+import { formatTitle } from '@/lib/utils/format';
 
 const cardSectionVariants = cva('rounded-lg border p-4', {
   variants: {
