@@ -44,6 +44,15 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
             >
               Saved trips
             </Link>
+            <Link
+              href={paths.ui}
+              className={cn(
+                typography['body-small'],
+                'text-fg-muted underline-offset-4 hover:text-foreground hover:underline',
+              )}
+            >
+              UI
+            </Link>
           </nav>
         </div>
       </header>
