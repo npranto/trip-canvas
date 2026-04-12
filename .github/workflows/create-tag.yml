@@ -5,6 +5,9 @@ name: Create Tag
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   create-tag:
     name: Bump Version + Create Tag
