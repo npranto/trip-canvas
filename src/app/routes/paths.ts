@@ -3,6 +3,8 @@ export const paths = {
   home: '/',
   tripNew: '/trip/new',
   trips: '/trips',
+  /** Visual gallery for `components/ui` primitives (design QA). */
+  ui: '/ui',
 } as const;
 
 /** Canonical trip canvas URL for a saved or generated trip id. */
