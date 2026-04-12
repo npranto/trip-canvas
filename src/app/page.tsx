@@ -21,7 +21,7 @@ export default function HomePage() {
         </p>
 
         <ExampleGreeting />
-        <ExampleCard subtitle="components/ + lib/formatTitle" />
+        <ExampleCard subtitle="components/ + lib/utils/format" />
         <Link className="text-blue-600 underline underline-offset-2 dark:text-blue-400" href={paths.tripNew}>
           New trip (app/routes/paths)
         </Link>

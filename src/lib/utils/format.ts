@@ -1,4 +1,4 @@
-/** Small string helper — `lib/` stays free of React and IO. */
+/** Small string helpers — `lib/` stays free of React and IO. */
 export function formatTitle(value: string): string {
   const t = value.trim();
   if (!t) return '';

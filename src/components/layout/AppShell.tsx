@@ -26,6 +26,12 @@ export function AppShell({ children }: Readonly<{ children: React.ReactNode }>) 
             >
               New trip
             </Link>
+            <Link
+              href={paths.trips}
+              className="text-zinc-600 underline-offset-4 hover:text-foreground hover:underline dark:text-zinc-400"
+            >
+              Saved trips
+            </Link>
           </nav>
         </div>
       </header>

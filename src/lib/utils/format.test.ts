@@ -1,4 +1,4 @@
-import { formatTitle } from '@/lib/formatTitle';
+import { formatTitle } from '@/lib/utils/format';
 
 describe('formatTitle', () => {
   it('returns empty string for whitespace-only input', () => {
