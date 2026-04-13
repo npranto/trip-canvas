@@ -18,32 +18,32 @@ const buttonVariants = cva(
         link: 'h-auto min-h-0 justify-normal gap-1 rounded-none border-0 bg-transparent p-0 text-brand-primary underline-offset-4 shadow-none hover:bg-transparent hover:underline focus-visible:ring-offset-0',
       },
       size: {
-        sm: 'h-8 px-3 text-sm [&_svg]:size-4',
-        md: 'h-10 px-4 text-sm [&_svg]:size-4',
-        lg: 'h-12 px-6 text-base [&_svg]:size-5',
-        icon: 'size-10 p-0 [&_svg]:size-4',
+        sm: 'py-1.5 px-3 text-sm leading-5 [&_svg]:size-4',
+        md: 'py-2 px-4 text-base leading-6 [&_svg]:size-4',
+        lg: 'py-2.5 px-5 text-lg leading-7 [&_svg]:size-5',
+        icon: 'p-2 [&_svg]:size-4',
       },
     },
     compoundVariants: [
       {
         variant: 'link',
         size: 'sm',
-        class: 'text-sm',
+        class: 'p-0 text-sm leading-5 [&_svg]:size-4',
       },
       {
         variant: 'link',
         size: 'md',
-        class: 'text-base',
+        class: 'p-0 text-base leading-6 [&_svg]:size-4',
       },
       {
         variant: 'link',
         size: 'lg',
-        class: 'text-lg',
+        class: 'p-0 text-lg leading-7 [&_svg]:size-5',
       },
       {
         variant: 'link',
         size: 'icon',
-        class: 'text-base',
+        class: 'p-0 text-base leading-6 [&_svg]:size-4',
       },
     ],
     defaultVariants: {
@@ -78,7 +78,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
       aria-busy={isLoading || undefined}
       {...props}
     >
-      {isLoading ? <LoaderCircle className="size-4 shrink-0 animate-spin" aria-hidden /> : leftIcon}
+      {isLoading ? <LoaderCircle className="size-[1em] shrink-0 animate-spin" aria-hidden /> : leftIcon}
       {children}
       {!isLoading ? rightIcon : null}
     </button>

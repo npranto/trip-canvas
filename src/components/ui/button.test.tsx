@@ -106,18 +106,24 @@ describe('Button', () => {
     expect(el).toHaveClass('hover:underline');
   });
 
-  it('applies size classes', () => {
+  it('applies size classes from padding and typography', () => {
     const { rerender } = render(<Button size="sm">S</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-8');
+    const sm = screen.getByRole('button');
+    expect(sm).toHaveClass('py-1.5', 'text-sm');
 
     rerender(<Button size="lg">L</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-12');
+    const lg = screen.getByRole('button');
+    expect(lg).toHaveClass('py-2.5', 'text-lg');
 
     rerender(
       <Button size="icon" aria-label="Star">
         <Star aria-hidden />
       </Button>,
     );
-    expect(screen.getByRole('button')).toHaveClass('size-10');
+    const icon = screen.getByRole('button');
+    expect(icon).toHaveClass('p-2');
+    expect(icon).not.toHaveClass('h-8');
+    expect(icon).not.toHaveClass('h-10');
+    expect(icon).not.toHaveClass('h-12');
   });
 });
